@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task-9</title>
+</head>
+<body>
+<script>
+function simulateAsyncOperation(callback) {
+  setTimeout(function() {
+    callback("The asynchronous operation is complete.");
+  }, 3000);
+}
+
+simulateAsyncOperation(function(data) {
+  console.log(data);
+});
+</script>
+</body>
+</html>

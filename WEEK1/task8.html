@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function checkNumber(number) {
+      if (number < 0) {
+        throw new Error("The number cannot be negative.");
+      }
+
+      return number;
+    }
+
+    function handleInput() {
+      var userInput = parseFloat(prompt("Enter a number:"));
+
+      try {
+        var result = checkNumber(userInput);
+        alert("The number is: " + result);
+      } catch (error) {
+        alert("Error: " + error.message);
+      }
+    }
+
+    </script>
+    <title>TASK 8</title>
+</head>
+<body>
+
+    <h2>Handle Error (negative)</h2>
+  <button onclick="handleInput()">Check Number</button>
+
+</body>
+</html>
